@@ -1,7 +1,5 @@
 import temperature
 
-
-
 def test_find_min_max():
     num_list = [5,67,58]
     result = temperature.find_min_max(num_list)

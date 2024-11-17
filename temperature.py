@@ -12,14 +12,17 @@ def get_user_input():
 def calc_average(num_list):
     average = sum(num_list)/len(num_list)
     result = "{:.2f}".format(average)
-    return result
+
+    print("Average of num_list:", result)
+    return 0
     
 def find_min_max(num_list):
     maximum = max(num_list)
     minimum = min(num_list)
 
     min_max_list = [minimum, maximum]
-    return min_max_list
+    print("Minimum and Maximum:", min_max_list)
+    return 1
 
 def sort_temperature(num_list):
    num_list.sort()    # a = sorted(num_list)
@@ -27,7 +30,8 @@ def sort_temperature(num_list):
 
 def calc_median_temperature(sorted_list):
       median_temperature = statistics.median(sorted_list)
-      return median_temperature
+      print("Median Temperature:", median_temperature)
+      return 2
 
 
 
@@ -38,17 +42,17 @@ def main():
     num_list = get_user_input()
     print("The numbers:", num_list)
 
-    average = calc_average(num_list)
-    print("Average of num_list:", average)
+    calc_average(num_list)
+   
 
-    min_max = find_min_max(num_list)
-    print("Minimum and Maximum:", min_max)
+    find_min_max(num_list)
+   
 
     sorted_list = sort_temperature(num_list)
     print("Ascending order list:", sorted_list)
 
-    median_temp = calc_median_temperature(sorted_list)
-    print("Median Temperature:", median_temp)
+    calc_median_temperature(sorted_list)
+   
 
 if __name__ == "__main__":
     main()
