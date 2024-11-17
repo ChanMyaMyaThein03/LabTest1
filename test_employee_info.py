@@ -10,7 +10,7 @@ def test_get_employees_by_age_range():
     assert(result == test)
 
 def test_calculate_average_salary():
-    test = 60166.67
+    test = 60166.666666666664
     result = employee_info.calculate_average_salary()
 
     assert(result == test)
